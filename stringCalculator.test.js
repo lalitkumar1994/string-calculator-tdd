@@ -19,3 +19,7 @@ test("handles new line as a separator", () => {
 test("handles custom delimiter", () => {
     expect(add("//;\n1;2")).toBe(3);
 });
+
+test("throws exception for negative numbers", () => {
+    expect(() => add("1,-2,-3")).toThrow("Negatives not allowed: -2, -3");
+});
